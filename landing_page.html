@@ -39,10 +39,8 @@
         </p>
         
         <div class="col-lg pt-3 d-flex justify-content-between">
-          <a href="signIn_page.html">
-            <button type="button" class="btn btn-md button btn-danger rounded-pill text-white" data-bs-toggle="" data-bs-target="">
+          <button id="signIn" type="button" class="btn btn-md button btn-danger rounded-pill text-white">
               Get Started</button>
-            </a>
         
           <button type="button" class="btn btn-md button btn btn-outline-info rounded-pill text-white">
             How it Works</button>
@@ -184,6 +182,21 @@
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
+    });
+  </script>
+
+
+  <script>
+    const init = function() {
+      let firstBtn = document.querySelector("#signIn");
+      
+      firstBtn.addEventListener('click', function() {
+        window.document.location = './signIn_page.html';
+      });
+    };
+
+    document.addEventListener('DOMContentLoaded',  function() {
+      init();
     });
   </script>
 </body>

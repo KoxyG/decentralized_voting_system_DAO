@@ -2,23 +2,34 @@
 
 
 :root {
-    --bs-gradient: linear-gradient(to left, darkblue, #152238);
-    --bs-gradients:linear-gradient(to left, darkblue, black);
+    --bs-gradient: linear-gradient(90deg, rgb(224, 246, 237), rgb(239, 248, 233));
+    font-size: 0.8rem;
 }
 
 .button {
     padding: 5px 15px 5px 15px;
-    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
-    -webkit-transition: all ease-in-out 300ms;
-    transition: all ease-in-out 300ms;
+    box-shadow: 0px 5px 2px -2px rgba(0, 0, 0, 0.4);
+    -webkit-transition: all ease-in-out 100ms;
+    transition: all ease-in-out 100ms;
     font-size: 1.05rem;
+    background-color: #0ca779;
+}
+
+.drop {
+    background-color: #0ca779;
+    
 }
 
 .button:hover {
-    box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
-    -webkit-transform: translate(0px, -5px) scale(1.1);
-    transform: translate(0px, -5px) scale(1.1);
+    
+    -webkit-transform: translate(0px, -3px) scale(1.0);
+    transform: translate(0px, -3px) scale(1.0);
 }
+
+.button-space {
+    padding-left: 70px;
+}
+
 
 .bg-gradient {
     background-image: var(--bs-gradient);
@@ -127,7 +138,6 @@ body{
 blockquote {
     display: block;
     font-size: 80%;
-    color: #6c757d;
 }
 
 blockquote p {
@@ -166,9 +176,7 @@ blockquote p {
 
 
 @media (max-width: 768px) {
-    .intro {
-        text-align: center;
-    }
+    
     .allcards {
         padding-top: 40px;
         padding-bottom: 40px;

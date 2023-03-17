@@ -14,36 +14,78 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-light bg-dark bg-gradient pt-3 fixed-top">
+  <nav class="navbar navbar-expand-lg bg-gradient navbar-light py-2 fixed-top">
+    <!--using container to contain it into a certain space in the middle-->
     <div class="container">
-      <a class="navbar-brand text-info h1 logo" data-aos="fade-right" href="#" ><span class="text-white"><strong>d</span>Ballot</strong> </a>
-
-      <button type="button" 
-        class="btn btn-md button btn btn-outline-info rounded-pill text-white" 
-        data-bs-toggle="" data-bs-target="#">
-        Connect Wallet</button>
+      <a class="navbar-brand text-green h1 logo" style="color:  #0ca779" data-aos="fade-right" href="#"><strong>dBall<span
+            class="text-dark">ot</strong> </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!--Using collapse so the nav bar will collapse on smaller screen-->
+  
+      <div class="collapse navbar-collapse drop " id="navmenu">
+        <!--Usibg ms auto-->
+        <ul class="navbar-nav ms-auto text-center text-light">
+          <li><a href="#" class="nav-link">Whitepaper</a></li>
+          <li><a href="#" class="nav-link">Vote Now</a></li>
+          
+          
+        </ul>
+      </div>
     </div>
   </nav>
 
+  
+  <!--
+
+  <nav class="navbar navbar-expand-lg bg-gradient py-2 fixed-top"></nav>
+    <div class="container">
+            <a class="navbar-brand text-green h1 logo" style="color:  #0ca779" data-aos="fade-right" href="#"><strong>dBall<span
+                  class="text-dark">ot</strong> </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            
+            <div class="collapse navbar-collapse" id="navmenu" >
+    
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Whitepaper</a></li>
+                        <li><a href="#">vote Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  -->
+
+
   <!--HEADING-->
-  <section class=" heading bg-dark bg-gradient p-5 gt-20" >
+  <section class=" heading  bg-gradient p-5 gt-20" >
     <div class="container heading-start">
 
       <div class="pt-5 intro" >
 
-        <h1 class="text-white mt pt-5" data-aos="fade-left"><strong>Electronic<br>Voting</strong></h1>
-        <p class="lead text-white pt-3" data-aos="fade-right">
+        <h1 class="text-dark mt pt-5" data-aos="fade-left"><strong>Decentralized Governance:<br>The Potential of DAOs in the Electoral Sector.</strong></h1>
+        <p class="lead text-secondary pt-3" data-aos="fade-right">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Voluptates repudiandae possimus repellat , error est nesciunt debitis.
           Consectetur officiis dolorem ipsa ad?
         </p>
         
-        <div class="col-lg pt-3 d-flex justify-content-between">
-          <button id="signIn" type="button" class="btn btn-md button btn-danger rounded-pill text-white">
-              Get Started</button>
-        
-          <button type="button" class="btn btn-md button btn btn-outline-info rounded-pill text-white">
-            How it Works</button>
+        <div class="col py-3 d-flex">
+          <div >
+            <button id="signIn" type="button" class="btn btn-sm button text-dark">
+                Vote Now</button>
+          </div>
+          <div class='button-space'>
+            <button type="button" class="btn btn-md button btn text-dark">
+              How it Works</button>
+          </div>
         </div>
       </div>
     </div>
@@ -55,16 +97,16 @@
 
 
   <!--CANDIDATES SECTION-->
-  <section class="candidates bg-dark bg-gradient p-5 gt-50">
+  <section class="candidates  bg-gradient p-5 gt-50">
     <div class="container candidates-can">
-      <h1 class="text-white text-center pb-5"><strong>Electoral <span class="text-info">Candidates</span></strong></h1>
+      <h1 class="text-dark text-center pb-5">Electoral Candidates</h1>
       <div class="row g-4 pb-5">
 
         <!--FIRST CANDIDATE-->
         
         <div class="col-md-6 col-lg-3 allcards">
           <div class="card pb-5" data-aos="zoom-in-right">
-            <div class="card-body text-white text-center">
+            <div class="card-body text-dark text-center">
               <div class="profile-img">
               <img src="https://randomuser.me/api/portraits/men/1.jpg" class='rounded-circle' alt="">
               </div>
@@ -83,7 +125,7 @@
 
         <div class="col-md-6 col-lg-3 allcards">
           <div class="card pb-5" data-aos="zoom-in-right">
-            <div class="card-body text-white text-center">
+            <div class="card-body text-dark text-center">
               <div class="profile-img">
                 <img src="https://randomuser.me/api/portraits/men/11.jpg" class='rounded-circle' alt="">
               </div>
@@ -102,7 +144,7 @@
 
         <div class="col-md-6 col-lg-3 allcards">
           <div class="card pb-5" data-aos="zoom-in-right">
-            <div class="card-body text-white text-center">
+            <div class="card-body text-dark text-center">
               <div class="profile-img">
                 <img src="https://randomuser.me/api/portraits/men/1.jpg" class='rounded-circle' alt="">
               </div>
@@ -121,7 +163,7 @@
 
         <div class="col-md-6 col-lg-3 allcards">
           <div class="card pb-5" data-aos="zoom-in-right">
-            <div class="card-body text-white text-center">
+            <div class="card-body text-dark text-center">
               <div class="profile-img">
                 <img src="https://randomuser.me/api/portraits/men/11.jpg" class='rounded-circle' alt="">
               </div>
@@ -143,19 +185,19 @@
 
 
   <!--FOOTER-->
-  <section class="footer bg-dark bg-gradients pt-5 gt-20">
+  <section class="footer bg-gradient pt-5 gt-20">
     
     <div class="container footer-footer">
-      <div class="footer-content row justify-content-center text-white">
+      <div class="footer-content row justify-content-center text-dark">
         <div class="col-md-6 text-center">
           <h3 class="footer-heading">Do you have any questions?</h3>
-          <button type="button" class="btn button btn-heading btn-sm btn btn-danger my-3 rounded-pill text-white" data-bs-toggle=""
+          <button type="button" class="btn button btn-heading btn-sm my-3 rounded-pill text-white" data-bs-toggle=""
             data-bs-target="#">
             Contact Us
           </button><br>
         </div>
         <div class="row mt-5">
-          <div class=" footer-bottom col-md-12 text-center">
+          <div class=" footer-bottom col-md-12 text-secondary text-center">
             <blockquote>
               <p class="copyright"> Copyright &copy 2023 All rights reserved | Made with ❤ by Koxy & Bhobo</p>
             </blockquote>
@@ -188,9 +230,9 @@
 
   <script>
     const init = function() {
-      let firstBtn = document.querySelector("#signIn");
+      let secondBtn = document.querySelector("#signIn");
       
-      firstBtn.addEventListener('click', function() {
+      secondBtn.addEventListener('click', function() {
         window.document.location = './signIn_page.html';
       });
     };

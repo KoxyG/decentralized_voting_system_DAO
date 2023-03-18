@@ -13,12 +13,16 @@
   <title>Landing Page</title>
 </head>
 
-<body>
+<body class="bg-gradient">
   <nav class="navbar navbar-expand-lg bg-gradient navbar-light py-2 fixed-top">
     <!--using container to contain it into a certain space in the middle-->
     <div class="container">
-      <a class="navbar-brand text-green h1 logo" style="color:  #0ca779" data-aos="fade-right" href="#"><strong>dBall<span
-            class="text-dark">ot</strong> </a>
+      <a class="navbar-brand-sm text-green h1 logo" 
+      style="background-image: linear-gradient(90deg, rgb(181, 37, 228), rgb(234, 32, 231));
+      background-clip: text;
+      color: transparent;"
+      data-aos="fade-right" href="#"><strong>dBall<span
+      class="text-light">ot</strong> </a>
   
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
@@ -28,7 +32,7 @@
   
       <div class="collapse navbar-collapse drop " id="navmenu">
         <!--Usibg ms auto-->
-        <ul class="navbar-nav ms-auto text-center text-light">
+        <ul class="navbar-nav ms-auto text-center text-white">
           <li><a href="#" class="nav-link">Whitepaper</a></li>
           <li><a href="#" class="nav-link">Vote Now</a></li>
           
@@ -70,7 +74,7 @@
 
       <div class="pt-5 intro" >
 
-        <h1 class="text-dark mt pt-5" data-aos="fade-left"><strong>Decentralized Governance:<br>The Potential of DAOs in the Electoral Sector.</strong></h1>
+        <h1 class="text-light mt pt-5" data-aos="fade-left"><strong>Decentralized Governance:<br>The Potential of DAOs in the Electoral Sector.</strong></h1>
         <p class="lead text-secondary pt-3" data-aos="fade-right">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Voluptates repudiandae possimus repellat , error est nesciunt debitis.
@@ -79,34 +83,52 @@
         
         <div class="col py-3 d-flex">
           <div >
-            <button id="signIn" type="button" class="btn btn-sm button text-dark">
+            <button id="signIn" type="button" class="btn btn-sm btn-light rounded-pill button text-light">
                 Vote Now</button>
           </div>
           <div class='button-space'>
-            <button type="button" class="btn btn-md button btn text-dark">
+            <button type="button" class="btn btn-md outline-button text-light">
               How it Works</button>
           </div>
         </div>
       </div>
     </div>
-    <hr class="text-white fluid">
+    <!--<hr class="text-white fluid">-->
   
   
   </section>
   
 
+  <marquee loop="-1" style="background-color:rgb(181, 37, 228); color: white">
+    • PLACE YOUR VOTES! 
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+  </marquee>
+
 
   <!--CANDIDATES SECTION-->
+
   <section class="candidates  bg-gradient p-5 gt-50">
     <div class="container candidates-can">
-      <h1 class="text-dark text-center pb-5">Electoral Candidates</h1>
+      <h1 class="text-light text-center pb-5">Electoral <span  style="background-image: linear-gradient(90deg, rgb(181, 37, 228), rgb(234, 32, 231));
+      background-clip: text;
+      color: transparent;">Candidates</span></h1>
       <div class="row g-4 pb-5">
 
         <!--FIRST CANDIDATE-->
         
         <div class="col-md-6 col-lg-3 allcards">
           <div class="card pb-5" data-aos="zoom-in-right">
-            <div class="card-body text-dark text-center">
+            <div class="card-body text-light text-center">
               <div class="profile-img">
               <img src="https://randomuser.me/api/portraits/men/1.jpg" class='rounded-circle' alt="">
               </div>
@@ -114,7 +136,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Maiores distinctio, molestias quisquam nulla tempore molestiae magnam architecto
               </p>
-              <button type="button" class="btn btn-md button btn btn-info rounded-pill text-white" data-bs-toggle=""
+              <button type="button" class="btn btn-md button btn btn-light rounded-pill text-white" data-bs-toggle=""
               data-bs-target="#">
                 Read More</button>
             </div>
@@ -125,7 +147,7 @@
 
         <div class="col-md-6 col-lg-3 allcards">
           <div class="card pb-5" data-aos="zoom-in-right">
-            <div class="card-body text-dark text-center">
+            <div class="card-body text-light text-center">
               <div class="profile-img">
                 <img src="https://randomuser.me/api/portraits/men/11.jpg" class='rounded-circle' alt="">
               </div>
@@ -133,7 +155,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Maiores distinctio, molestias quisquam nulla tempore molestiae magnam architecto
               </p>
-              <button type="button" class="btn btn-md button btn btn-info rounded-pill text-white" data-bs-toggle=""
+              <button type="button" class="btn btn-md button btn btn-light rounded-pill text-white" data-bs-toggle=""
                 data-bs-target="#">
                 Read More</button>
             </div>
@@ -144,7 +166,7 @@
 
         <div class="col-md-6 col-lg-3 allcards">
           <div class="card pb-5" data-aos="zoom-in-right">
-            <div class="card-body text-dark text-center">
+            <div class="card-body text-light text-center">
               <div class="profile-img">
                 <img src="https://randomuser.me/api/portraits/men/1.jpg" class='rounded-circle' alt="">
               </div>
@@ -152,7 +174,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Maiores distinctio, molestias nulla  quisquam quisquam nulla tempore molestiae magnam architecto
               </p>
-              <button type="button" class="btn btn-md button btn btn-info rounded-pill text-white" data-bs-toggle=""
+              <button type="button" class="btn btn-md button btn btn-light rounded-pill text-white" data-bs-toggle=""
                 data-bs-target="#">
                 Read More</button>
             </div>
@@ -163,7 +185,7 @@
 
         <div class="col-md-6 col-lg-3 allcards">
           <div class="card pb-5" data-aos="zoom-in-right">
-            <div class="card-body text-dark text-center">
+            <div class="card-body text-light text-center">
               <div class="profile-img">
                 <img src="https://randomuser.me/api/portraits/men/11.jpg" class='rounded-circle' alt="">
               </div>
@@ -171,7 +193,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Maiores distinctio, molestias nulla quisquam quisquam nulla tempore molestiae magnam architecto
               </p>
-              <button type="button" class="btn btn-md button btn btn-info rounded-pill text-white" data-bs-toggle=""
+              <button type="button" class="btn btn-md button btn btn-light rounded-pill text-white" data-bs-toggle=""
                 data-bs-target="#">
                 Read More</button>
             </div>
@@ -183,15 +205,30 @@
     
   </section>
 
+  <marquee loop="-1" style="background-color:rgb(181, 37, 228); color: white">
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+    • PLACE YOUR VOTES!
+  </marquee>
+
 
   <!--FOOTER-->
   <section class="footer bg-gradient pt-5 gt-20">
     
     <div class="container footer-footer">
-      <div class="footer-content row justify-content-center text-dark">
+      <div class="footer-content row justify-content-center text-light">
         <div class="col-md-6 text-center">
           <h3 class="footer-heading">Do you have any questions?</h3>
-          <button type="button" class="btn button btn-heading btn-sm my-3 rounded-pill text-white" data-bs-toggle=""
+          <button type="button" class="btn button btn-heading btn-light btn-sm my-3 rounded-pill text-white" data-bs-toggle=""
             data-bs-target="#">
             Contact Us
           </button><br>

@@ -14,8 +14,11 @@
 </head>
 
 <body class="bg-gradient">
+  
+
+  <!--
+
   <nav class="navbar navbar-expand-lg bg-gradient navbar-light py-2 fixed-top">
-    <!--using container to contain it into a certain space in the middle-->
     <div class="container">
       <a class="navbar-brand-sm text-green h1 logo" 
       style="background-image: linear-gradient(90deg, rgb(181, 37, 228), rgb(234, 32, 231));
@@ -27,11 +30,9 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
-      <!--Using collapse so the nav bar will collapse on smaller screen-->
+
   
       <div class="collapse navbar-collapse drop " id="navmenu">
-        <!--Usibg ms auto-->
         <ul class="navbar-nav ms-auto text-center text-white">
           <li><a href="#" class="nav-link">Whitepaper</a></li>
           <li><a href="#" class="nav-link">Vote Now</a></li>
@@ -41,31 +42,29 @@
       </div>
     </div>
   </nav>
+   -->
 
-  
-  <!--
 
-  <nav class="navbar navbar-expand-lg bg-gradient py-2 fixed-top"></nav>
-    <div class="container">
-            <a class="navbar-brand text-green h1 logo" style="color:  #0ca779" data-aos="fade-right" href="#"><strong>dBall<span
-                  class="text-dark">ot</strong> </a>
+  <nav>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"> 
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class=" container logo">
+      <a class="navbar-brand-sm text-green h1 logo" style="background-image: linear-gradient(90deg, rgb(181, 37, 228), rgb(234, 32, 231));
+            background-clip: text;
+            color: transparent;" data-aos="fade-right" href="#"><strong>dBall<span class="text-light">ot</strong> </a>
+    </div>
 
-            
-            <div class="collapse navbar-collapse" id="navmenu" >
-    
-                <ul class="navbar-nav ms-auto text-center">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Whitepaper</a></li>
-                        <li><a href="#">vote Now</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-  -->
+    <ul class="nav-links">
+      <li><a href="#">Whitepaper</a></li>
+      <li><a href="signIn_page.html">Vote Now</a></li>
+    </ul>
+
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line1"></div>
+      <div class="line1"></div>
+    </div>
+  </nav>
+
 
 
   <!--HEADING-->
@@ -262,6 +261,33 @@
       duration: 1000,
       easing: 'ease-in-out',
     });
+  </script>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
+    const navLinks = document.querySelector(".nav-links");
+
+    burger.addEventListener("click", function() {
+      burger.classList.toggle('is-active');
+      navLinks.classList.toggle('is-active');
+    });
+
+    /*it seems is-active or any random name you call it is a class that was created during this process
+    and needs to be called or included in the media query of the mibile view*/
+
+    document.querySelectorAll("a").forEach(n => n.
+    addEventListener("click",() => {
+      burger.classList.remove("is-active");
+      navLinks.classList.remove("is-active");
+    }));
+
+    
+
+
+
+
+
   </script>
 
 

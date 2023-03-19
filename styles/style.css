@@ -6,6 +6,54 @@
     font-size: 0.8rem;
 }
 
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgb(11, 10, 14), rgb(26, 21, 39));;
+    color: white;
+    height: 10vh;
+}
+
+.burger {
+    display:none;
+    cursor: pointer;
+
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #b525e4;
+    margin: 5px;
+    
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding-right: 30px;
+    font-size: 1rem;
+
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
 .button {
     padding: 5px 15px 5px 15px;
     box-shadow: 0px 5px 2px -2px rgba(0, 0, 0, 0.4);
@@ -48,9 +96,8 @@
     background-image: var(--bs-gradients);
 }
 
-body{
-    font-family: 'Libre Baskerville', serif;
-}
+
+
 
 .card {
     border-radius: 1rem;
@@ -188,12 +235,60 @@ blockquote p {
     }
 }
 
+/*FOR MOBILE */
+
+@media (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
 
 @media (max-width: 768px) {
+    
+
+    .nav-links {
+        position:absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: none;
+
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        background-image: linear-gradient(90deg, rgb(11, 10, 14), rgb(26, 21, 39));
+        backdrop-filter: blur(4rem);
+    }
+
+
+    .burger {
+        display: block;
+    }
+
     
     .allcards {
         padding-top: 40px;
         padding-bottom: 40px;
     }
+
+    .is-active {
+        display:block;
+        
+    }
 }
 
+
+
+
+.burger.is-active .line1 {
+    transform: translate(0px, 8px) rotate(-45deg);
+}
+
+.burger.is-active .line2 {
+    opacity: 0;
+    transform: translate(15px);
+}
+
+.burger.is-active .line3 {
+    transform: translate(0px, -8px) rotate(45deg);
+}

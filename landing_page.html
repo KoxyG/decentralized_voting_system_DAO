@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="styles/style.css">
@@ -14,36 +13,6 @@
 </head>
 
 <body class="bg-gradient">
-  
-
-  <!--
-
-  <nav class="navbar navbar-expand-lg bg-gradient navbar-light py-2 fixed-top">
-    <div class="container">
-      <a class="navbar-brand-sm text-green h1 logo" 
-      style="background-image: linear-gradient(90deg, rgb(181, 37, 228), rgb(234, 32, 231));
-      background-clip: text;
-      color: transparent;"
-      data-aos="fade-right" href="#"><strong>dBall<span
-      class="text-light">ot</strong> </a>
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-  
-      <div class="collapse navbar-collapse drop " id="navmenu">
-        <ul class="navbar-nav ms-auto text-center text-white">
-          <li><a href="#" class="nav-link">Whitepaper</a></li>
-          <li><a href="#" class="nav-link">Vote Now</a></li>
-          
-          
-        </ul>
-      </div>
-    </div>
-  </nav>
-   -->
-
 
   <nav>
 
@@ -51,9 +20,11 @@
       <h2 class=" sm h1  text-gradients ">dBall<span class="text-plain">ot</span></h2>
     </div>
 
-    <ul class="nav-links">
+    <ul class="container nav-links">
+
+      <li id='signIn' class="vote"><button type="button" class="btn btn-md outline-button text-light">Vote now</button></li>
       <li><a href="#">Whitepaper</a></li>
-      <li class="pt-4"><a href="signIn_page.html">Vote Now</a></li>
+
     </ul>
 
     <div class="burger">
@@ -62,8 +33,6 @@
       <div class="line1"></div>
     </div>
   </nav>
-
-
 
   <!--HEADING-->
   <section class=" heading  bg-gradient p-5 gt-20" >
@@ -90,9 +59,6 @@
         </div>
       </div>
     </div>
-    <!--<hr class="text-white fluid">-->
-  
-  
   </section>
   
 
@@ -231,17 +197,17 @@
         <div class="row mt-5">
           <div class=" footer-bottom col-md-12 text-secondary text-center">
             <blockquote>
-              <p class="copyright"> Copyright &copy 2023 All rights reserved | Made with ❤ by Koxy & Bhobo</p>
+              <p class="copyright"> Copyright &copy 2023 All rights reserved | Made by Koxy & Bhobo</p>
             </blockquote>
           </div>
           
         </div>
       </div>
     </div>
-
   </section>
 
 
+  <!--JAVASCRIPT SECTION-->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -258,6 +224,8 @@
       easing: 'ease-in-out',
     });
   </script>
+
+  
 
   <script>
     const burger = document.querySelector('.burger');
@@ -277,13 +245,15 @@
       burger.classList.remove("is-active");
       navLinks.classList.remove("is-active");
     }));
-
-    
-
+  </script>
 
 
+  <script>
+    var sign = document.getElementById('signIn');
 
-
+    sign.addEventListener('click', () => {
+      window.document.location =  './signIn_page.html';
+    });
   </script>
 
 

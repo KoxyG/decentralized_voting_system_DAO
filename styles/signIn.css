@@ -1,3 +1,6 @@
+@import "style.css";
+
+
 .login {
     padding-top: 20px;
     -webkit-box-pack: end;
@@ -11,6 +14,105 @@
     padding-top: 20px;
 }
 
-.logo {
+.SecondLogo {
     margin-bottom: 40px;
 }
+
+.wallet-dialog-content {
+    padding: 8px;
+    margin: 20px;
+}
+
+.wallet-heading {
+    margin: 0px 0px 20px;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.wallet-holder {
+    display:block;
+}
+
+.wallet {
+    
+    background: rgba(125, 166, 220, 0.05);
+    border-radius: 10px;
+    margin-bottom: 16px;
+    height: 50px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease 0;
+    
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.top-wallet {
+    padding-right: 20px;
+}
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#modal {
+    max-width: 600px;
+    height: 300px;
+    margin: auto;
+    
+    position:  absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: blur(4rem);
+}
+
+#website-content {
+    height: 1000vh;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .top-wallet {
+        width: 25rem;
+       
+    }
+    .toppest {
+        margin-left: 80px;
+    }
+
+}
+
+
+@media (max-width: 786) {
+    .wallet-dialog-content {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+    

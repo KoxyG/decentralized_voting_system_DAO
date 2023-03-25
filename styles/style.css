@@ -13,12 +13,14 @@ body {
 
 .text-gradients {
     background: -webkit-linear-gradient(#fecf00, #e87e0c);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .text-plain {
     background: -webkit-linear-gradient(white, white);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -79,10 +81,13 @@ nav {
     background-color: #fc9741;
 }
 
+
+
 .drop {
     background-color:#b525e4;
     
 }
+
 
 .button:hover {
     
@@ -281,6 +286,11 @@ blockquote p {
         width: 50%;
         background-image: linear-gradient(90deg, rgb(23, 15, 61), rgb(13, 2, 47));
         backdrop-filter: blur(4rem);
+        z-index: 1;
+    }
+
+    .vote {
+        padding-bottom: 40px;
     }
 
 

@@ -29,18 +29,177 @@
     
     </nav>
 
-    <table class="table table-dark table-hover">
-        <thead>
-            <tr>
+    <section class="container pt-5">
 
-                <th scope="col">#</th>
-                
-                <th scope="col">Name</th>
-                <th scope="col">About</th>
-                <th scope="col">Vote Now</th>
-            </tr>
-        </thead>
-    </table>
+        <div class="table-container">
+            <div class="heading">
+                <h1 style="font-size: 40px">Voting DashBoard</h1>
+                <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>CANDIDATE</th>
+                        <th>NAME</th>
+                        <th>PARTY</th>
+                        <th>VOTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="ID">1</td>
+                        <td data-label="CANDIDATE"><img src="https://randomuser.me/api/portraits/men/1.jpg" class='vote-img rounded-circle' alt=""></td>
+                        <td data-label="NAME">Peter</td>
+                        <td data-label="PARTY">PDP</td>
+                        <td data-label="VOTE"><button type="button" id="show" class="align-item-right btn btn button" data-toggle="modal"
+                            data-target="#myModal">Vote</button>
+                        </td>
+                        <div id="dip" onclick="clickButton(1)" class="alert alert-success">
+                            <strong>Success!</strong> vote recorded successfully.
+                        </div>
+                    </tr>
+
+                    <tr>
+                        <td data-label="ID">2</td>
+                        <td data-label="CANDIDATE"><img src="https://randomuser.me/api/portraits/men/1.jpg" class='vote-img rounded-circle' alt=""></td>
+                        <td data-label="NAME">Peter</td>
+                        <td data-label="PARTY">PDP</td>
+                        <td data-label="VOTE"><button type="button" id="show2" class="align-item-right btn btn button" data-toggle="modal"
+                            data-target="#myModal">Vote</button>
+                        </td>
+                        <div id="dip2" onclick="clickButton(2)" class="alert alert-success">
+                            <strong>Success!</strong> vote recorded successfully.
+                        </div>
+                        
+                    </tr>
+
+                    <tr>
+                        <td data-label="ID">3</td>
+                        <td data-label="CANDIDATE"><img src="https://randomuser.me/api/portraits/men/1.jpg" class='vote-img rounded-circle' alt=""></td>
+                        <td data-label="NAME">Peter</td>
+                        <td data-label="PARTY">APC</td>
+                        <td data-label="VOTE"><button type="button" id="show3" class="align-item-right btn btn button" data-toggle="modal"
+                            data-target="#myModal">Vote</button></td>
+                    </tr>
+                    <div id="dip3" onclick="clickButton(3)" class="alert alert-success">
+                        <strong>Success!</strong> vote recorded successfully.
+                    </div>
+
+                    <tr>
+                        <td data-label="ID">4</td>
+                        <td data-label="CANDIDATE"><img src="https://randomuser.me/api/portraits/men/1.jpg" class='vote-img rounded-circle' alt=""></td>
+                        <td data-label="NAME">Peter Obi</td>
+                        <td data-label="PARTY">PDP</td>
+                        <td data-label="VOTE"><button type="button" id="show4" class="align-item-right btn btn button" data-toggle="modal" data-target="#myModal">Vote</button></td>
+                    </tr>
+                    <div id="dip4" onclick="clickButton(4)" class="alert alert-success">
+                        <strong>Success!</strong> vote recorded successfully.
+                    </div>
+                </tbody>
+            </table>
+            
+
+
+            <div class="next py-3">
+                <button type="button" id="resultPage" class=" btn text-white btn button" data-toggle="modal" data-target="#myModal">CONTINUE ></button>
+            </div>
+
+        </div>
+        
+
+    <section>
+
+
+    <script>
+
+
+        var clickedButton = 0;
+
+        function clickButton(buttonId) {
+            if (clickedButton === buttonId) {
+                //if the same button is clicked twice, unselect it
+
+                alert("Erro" + buttonId + "is already clicked!");
+uiy63eti
+
+            } else {
+                // if a different button is clicked and another button is already selected, show an error message
+                clickedButton = buttonId;
+                alert("an be selected at a time");
+            }
+        }
+
+        /**FIRST BUTTON**/
+/**
+        var open = document.getElementById('dip');
+        var display = document.getElementById('show');
+        var myTimer;
+
+        display.addEventListener('click', () => {
+            open.style.display = 'block';
+            clearTimeout(myTimer); // Clear any previous timer
+            myTimer = setTimeout(() => {
+                open.style.display = 'none';
+            }, 2000);
+        });
+
+        
+
+        var open2 = document.getElementById('dip2');
+        var display2 = document.getElementById('show2');
+        var myTimer;
+
+        display2.addEventListener('click', () => {
+            open2.style.display = 'block';
+            clearTimeout(myTimer); // Clear any previous timer
+            myTimer = setTimeout(() => {
+                open2.style.display = 'none';
+            }, 2000);
+        });
+
+        
+
+        var open3 = document.getElementById('dip3');
+        var display3 = document.getElementById('show3');
+        var myTimer;
+
+        display3.addEventListener('click', () => {
+            open3.style.display = 'block';
+            clearTimeout(myTimer); // Clear any previous timer
+            myTimer = setTimeout(() => {
+                open3.style.display = 'none';
+            }, 2000);
+        });
+
+        
+
+        var open4 = document.getElementById('dip4');
+        var display4 = document.getElementById('show4');
+        var myTimer;
+
+        display4.addEventListener('click', () => {
+            open4.style.display = 'block';
+            clearTimeout(myTimer); // Clear any previous timer
+            myTimer = setTimeout(() => {
+                open4.style.display = 'none';
+            }, 2000);
+        });
+
+        **/
+
+    </script>
+
+    <script>
+
+        /*INTEGRATION FOR NEXT PAGE BUTTON*/
+
+        var next = document.getElementById('resultPage');
+
+        next.addEventListener('click', () => {
+            window.document.location = './result.html';
+        });
+    </script>
 
     
 </body>

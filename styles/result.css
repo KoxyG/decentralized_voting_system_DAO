@@ -1,0 +1,10 @@
+#myChart {
+    width: 100%;
+    position: relative;
+    background: rgba(171, 171, 171, 0.1);
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+    position: relative;
+    border-color: rgba(225, 225, 225, 0.5);
+    color: #a7a3f8;
+    border-radius: 0.8rem;
+}

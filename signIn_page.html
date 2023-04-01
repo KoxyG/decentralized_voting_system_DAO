@@ -51,10 +51,6 @@
 
 
 
-            
-            <!--
-
-                MODAL DESIGN WITH JAVASCRIPT FOR FUTURE DESIGN
 
             <div id="overlay" class="bg-gradient">
                 <div id="modal" >
@@ -64,6 +60,7 @@
                     
 
                     <div class="row text-center wallet-dialog-content">
+                        <span class="close">&times;</span>
                         <h2 class="wallet-heading text-white">Connect Wallet</h2>
 
                         
@@ -72,16 +69,11 @@
                             <img src="../images/MetaMask.png.png" class="rounded-circle" style="width: 25px; height: 25px;" >
                             <p>MetaMask</p>
                             </div>
-                    
-                            <div class="pt-3 wallet d-flex">
-                            <img src="../images/WalletConnect.png" class="rounded-circle" style="width: 25px; height: 25px;">
-                            <p>WalletConnect</p>
+                            <div>
+                                <p>Don't have metamask? <a href="#">click here</a></p>
                             </div>
                     
-                            <div class="pt-3 wallet d-flex">
-                            <img src="../images/coinbase-coin.png" class="rounded-circle" style="width: 25px; height: 25px;">
-                            <p>Coinbase Wallet</p>
-                            </div>
+            
                         </div>
 
                         <div id="votePage" class="container pt-5 d-flex justify-content-center">
@@ -105,6 +97,7 @@
         var show = document.getElementById('show-modal');
         var show2 = document.getElementById('show-modal-1');
         var close = document.getElementById('close-model-btn');
+        var span = document.getElementsByClassName("close")[0];
 
         show.addEventListener('click', () => {
             overlay.style.display = "block";

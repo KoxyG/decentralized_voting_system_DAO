@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/signin.css">
+    <link rel="stylesheet" href="styles/voting.css">
+    <link rel="stylesheet" href="styles/result.css">
+
+    <title>Voting page</title>
+</head>
+
+<body class="bg-gradient">
+
+    <nav>
+    
+        <div class="container logo">
+            <h2 class="sm h1  text-gradients">dBall<span class="text-plain">ot</span></h2>
+        </div>
+        
+        <div id="show-modal-1" class="top-wallet toppest">
+            <button type="button" class="btn btn-fliud rounded-pill button" data-toggle="modal"
+                data-target="#myModal">Connect
+                Wallet</button>
+        </div>
+    
+    </nav>
+
+    <div class="container p-5 text-white">
+        <h1>Summary Votes</h1>
+        <p class=text-secondary style="font-size: 20px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="container px-5 chart d-flex" >
+
+        <canvas id="myChart">
+        </canvas>
+    </div>
+
+    <div class="container text-secondary p-5" style="font-size: 20px;">
+        <p>Your vote has been recorded, successfully. <br> <a href="landing_page.html">Click here</a></p>
+    </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // Get the canvas element
+            var ctx = document.getElementById('myChart').getContext('2d');
+
+            // Define the data for the chart
+            var data = {
+                labels: ['PDP', 'APC', 'WYC', 'KPP'],
+                datasets: [{
+                    label: 'Vote Percentage',
+                    data: [12, 19, 3, 4],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)',
+                        'rgb(254, 105, 56)'
+                    ],
+                    hoverOffset: 4
+                }]
+            };
+
+            // Create the chart
+            Chart.defaults.color = 'white';
+            
+            Chart.defaults.font.size = 12;
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    responsive: true,
+                    Option: {
+                        layout: {
+                            padding: {
+                                left: 50
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Result'
+                        }
+                        
+                    }
+                }
+            });
+
+    </script>
+
+    
+
+</body>
+
+</html>

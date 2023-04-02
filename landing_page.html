@@ -77,6 +77,34 @@
   • CAST YOUR VOTE NOW!
   </marquee>
 
+  <!--COUNTDOWN -->
+
+
+  <div class="container p-5 text-center mw-50 bg-gradient">
+        <div class="time-block row-sm launch-time py-4 d-flex justify-content-center text-light">
+          <div class="col" style="font-size: 1.2rem" >
+            <P id="days">00</P>
+            <span>DAYS</span>
+          </div>
+  
+          <div class="col" style="font-size: 1.2rem; border-left: 1px solid #a7a3f8">
+            <P id="hours">00</P>
+            <span>HOURS</span>
+          </div>
+  
+          <div class="col" style="font-size: 1.2rem; border-left: 1px solid #a7a3f8">
+            <P id="minutes">00</P>
+            <span>MINUTES</span>
+          </div>
+  
+        </div>
+        <div class="text-secondary" style="font-size: 1.2rem">
+          <p>Remaining until the next election</p>
+        </div>
+  </div>
+
+  <!--STOP-->
+
 
   <!--CANDIDATES SECTION-->
 
@@ -166,6 +194,34 @@
     
   </section>
 
+  <!--COUNTDOWN-->
+
+  <div class="container  p-5 text-center mw-50 bg-gradient">
+    <div class="time-block row-sm launch-time py-4 d-flex justify-content-center text-light">
+      <div class="col" style="font-size: 1.2rem">
+        <P id="day">00</P>
+        <span>DAYS</span>
+      </div>
+  
+      <div class="col" style="font-size: 1.2rem; border-left: 1px solid #a7a3f8">
+        <P id="hour">00</P>
+        <span>HOURS</span>
+      </div>
+  
+      <div class="col" style="font-size: 1.2rem; border-left: 1px solid #a7a3f8">
+        <P id="minute">00</P>
+        <span>MINUTES</span>
+      </div>
+  
+    </div>
+    <div class="text-secondary" style="font-size: 1.2rem">
+      <p>Remaining until the next election</p>
+    </div>
+  </div>
+
+  <!--STOP-->
+
+
   <marquee loop="-1" style=" background-color:#a7a3f8; font-size:0.7rem">
     • CAST YOUR VOTE NOW!
     • CAST YOUR VOTE NOW!
@@ -206,7 +262,87 @@
     </div>
   </section>
 
+  <!-- FIRST COUNTDOWN SCRIPT-->
 
+  <script>
+    //creating variable for end time
+    var countDownDate = new Date("July 06, 2023 00:00:00").getTime();
+    var x = setInterval(function () {
+      //setting variables for recent time and others
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      //cautomatically calculating the days, hours, minutes and seconds
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      //displaying the days, hours, minutes, seconds
+
+
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+
+      //what the time should display when countdown is over
+
+      if (distance < 0) {
+        clearInterval(x);
+
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+      }
+
+    }, 1000);
+
+  </script>
+
+
+
+  <!--SECOND COUNTDOWN SCRIPT-->
+
+  <script>
+    //creating variable for end time
+    var countDownDate = new Date("July 06, 2023 00:00:00").getTime();
+    var x = setInterval(function () {
+      //setting variables for recent time and others
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      //cautomatically calculating the days, hours, minutes and seconds
+
+      var day = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minute = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var second = Math.floor((distance % (1000 * 60)) / 1000);
+
+      //displaying the days, hours, minutes, seconds
+
+
+      document.getElementById("day").innerHTML = day;
+      document.getElementById("hour").innerHTML = hour;
+      document.getElementById("minute").innerHTML = minute;
+      document.getElementById("second").innerHTML = second;
+
+      //what the time should display when countdown is over
+
+      if (distance < 0) {
+        clearInterval(x);
+
+        document.getElementById("day").innerHTML = "00";
+        document.getElementById("hour").innerHTML = "00";
+        document.getElementById("minute").innerHTML = "00";
+        document.getElementById("second").innerHTML = "00";
+      }
+
+    }, 1000);
+
+  </script>
   <!--JAVASCRIPT SECTION-->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

@@ -137,6 +137,18 @@ nav {
     
 }
 
+.time-block {
+    padding-top: 40px;
+
+    border-radius: 1rem;
+    backdrop-filter: blur(4rem);
+    background: rgba(171, 171, 171, 0.1);
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+    
+}
+
+
+
 /*CARD FILL OF GRADIENT COLOR BEGINS*/
 
 

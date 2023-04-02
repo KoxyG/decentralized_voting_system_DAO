@@ -38,7 +38,7 @@
                     <p class="card-text pt-2 text-light">Start voting in seconds</p>
 
                     <!--CONNECT WALLET BUTTON BELOW-->
-                    <div id="show-modal" class="top-wallet">
+                    <div id="myBtn">
                         <button type="button" class="btn btn-fliud rounded-pill button" data-toggle="modal" data-target="#myModal">Connect
                             Wallet</button>
                     </div>
@@ -52,19 +52,15 @@
 
 
 
-            <div id="overlay" class="bg-gradient">
-                <div id="modal" >
-
-
-                    <button type="button" id="close-model-btn" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
-                    
-
-                    <div class="row text-center wallet-dialog-content">
+            <div id="myModal" class="modal bg-gradient">
+                <div class="modal-content" >
+                    <div class="modal-header row text-center wallet-dialog-content">
+                        <!--<button type="button" id="close-model-btn" class="btn-close bg-light" data-bs-dismiss="modal"
+                            aria-label="Close"></button>-->
                         <span class="close">&times;</span>
                         <h2 class="wallet-heading text-white">Connect Wallet</h2>
 
-                        
-                        <div class="wallet-holder">
+                        <div class="modal-body">
                             <div class="pt-3 wallet d-flex">
                             <img src="../images/MetaMask.png.png" class="rounded-circle" style="width: 25px; height: 25px;" >
                             <p>MetaMask</p>
@@ -93,14 +89,18 @@
 
         /*INTEGRATED JAVASCRIPT FOR THE BUTTONS*/
 
-        var overlay = document.getElementById('overlay');
-        var show = document.getElementById('show-modal');
+        var overlay = document.getElementById('myModal');
+        var show = document.getElementById('myBtn');
         var show2 = document.getElementById('show-modal-1');
         var close = document.getElementById('close-model-btn');
         var span = document.getElementsByClassName("close")[0];
 
         show.addEventListener('click', () => {
             overlay.style.display = "block";
+        });
+
+        span.addEventListener('click', () => {
+            overlay.style.display = "none";
         });
 
         show2.addEventListener('click', () => {
@@ -110,6 +110,8 @@
         close.addEventListener('click', () => {
             overlay.style.display = "none";
         })
+
+        
 
     </script>
 

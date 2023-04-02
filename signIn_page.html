@@ -66,14 +66,12 @@
                                 <p>MetaMask</p>
                             </div>
                             <div class="pt-3 wallet d-flex">
-                            <img src="images/MetaMask_Fox.svg.png" class="rounded-circle" style="width: 25px; height: 25px;" >
-                            <p>MetaMask</p>
+                                <img src="images/MetaMask_Fox.svg.png" class="rounded-circle" style="width: 25px; height: 25px;" >
+                                <p>MetaMask</p>
                             </div>
                             <div>
                                 <p>Don't have MetaMask? <a href="#">click here</a></p>
                             </div>
-                    
-            
                         </div>
 
                         <div id="votePage" class="container pt-5 d-flex justify-content-center">
@@ -96,15 +94,15 @@
         var show = document.getElementById('myBtn');
         var show2 = document.getElementById('show-modal-1');
         var close = document.getElementById('close-model-btn');
-        var span = document.getElementsByClassName("close")[0];
+        /**var span = document.getElementsByClassName("close")[0];**/
 
         show.addEventListener('click', () => {
             overlay.style.display = "block";
         });
 
-        span.addEventListener('click', () => {
+        /**span.addEventListener('click', () => {
             overlay.style.display = "none";
-        });
+        });**/
 
         show2.addEventListener('click', () => {
             overlay.style.display = "block"; 
@@ -112,8 +110,13 @@
 
         close.addEventListener('click', () => {
             overlay.style.display = "none";
-        })
+        });
 
+        window.onclick = function(event) {
+            if (event.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        }
 
 
     </script>

@@ -147,6 +147,25 @@ nav {
     
 }
 
+.blockchain_img {
+   
+    width: 100%;
+    
+    right: 0;
+    object-fit: cover;
+    animation: moveUpDown 8s ease-in-out infinite;
+    position: relative;
+
+   
+    
+}  
+
+.blockchain_img img {
+    width: 80%;
+    height: auto;
+   
+}
+
 
 
 /*CARD FILL OF GRADIENT COLOR BEGINS*/
@@ -248,6 +267,19 @@ blockquote p {
 }
 
 
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
 
 @keyframes fill {
     40% {
@@ -286,11 +318,23 @@ blockquote p {
     .nav-links {
         width: 60%;
     }
+    .blockchain_img {
+        max-width: 700px;
+    }
+
+    .block {
+        height: auto;
+        max-height: 100%;
+    }
 }
 
-@media (max-width: 768px) {
     
 
+@media (max-width: 768px) {
+
+    .block_head {
+        flex-direction: column;
+    }
     .nav-links {
         position:absolute;
         right: 0px;
@@ -334,6 +378,9 @@ blockquote p {
 
     .whitepaper {
         padding-top: 20px;
+    }
+    .blockchain_img {
+        width: 90%;
     }
 }
 

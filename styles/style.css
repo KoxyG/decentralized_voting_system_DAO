@@ -310,6 +310,11 @@ blockquote p {
         padding-top: 40px;
         padding-bottom: 40px;
     }
+
+    .nav-bar {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 /*FOR MOBILE */

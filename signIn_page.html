@@ -16,15 +16,14 @@
 <body class="bg-gradient">
 
 
-    <nav class='nav-bar'>
+    <nav class='nav-bar bg-gradient'>
     
         <div class="container logo">
             <h2 class=" sm h1  text-gradients ">dBall<span class="text-plain">ot</span></h2>
         </div>
         <!--CONNECT WALLET BUTTON TOP RIGHT-->
         <div id="show-modal-1" class="top-wallet toppest">
-            <button type="button" class="btn btn-fliud rounded-pill button" data-toggle="modal" data-target="#myModal">Connect
-            Wallet</button>
+            <button type="button" class="btn btn-fliud rounded-pill button" data-toggle="modal" data-target="#myModal">Connect</button>
         </div>
     </nav>
 
@@ -34,8 +33,8 @@
                 
                 <div class="card-body py-4 mt-5">
                     <h2 class=" sm h1 SecondLogo text-gradients">dBall<span class="text-plain">ot</span></h2>
-                    <h3 class="card-title login-title pt-5 text-light ">Login with your wallet</h3>
-                    <p class="card-text pt-2 text-light">Start voting in seconds</p>
+                    <h3 class="card-title login-title pt-5 text-light ">Welcome Fren👋</h3>
+                    <p class="card-text text-light">Start voting in seconds</p>
 
                     <!--CONNECT WALLET BUTTON BELOW-->
                     <div id="myBtn">
@@ -53,31 +52,33 @@
 
 
             <div id="myModal" class="modal bg-gradient">
-                <div class="modal-content" >
-                    <div class="modal-header row text-center wallet-dialog-content">
-                        <button type="button" id="close-model-btn" class="btn-close bg-light" data-bs-dismiss="modal"
+                <div class="modal-cont" >
+                    <div class="modal-head row text-center">
+                        <button type="button" id="close-model-btn" class="btn-close close bg-light" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                         <!--<span class="close">&times;</span>-->
-                        <h2 class="wallet-heading text-white">Connect Wallet</h2>
+                        <h2 class="wallet-heading text-white text-center">Connect Wallet or SignIn</h2>
+                        <p class="wallet-heading-para text-center text-white"</p>
 
                         <div class="modal-body text-center">
-                            <div class="pt-3 wallet d-flex">
-                                <img src="images/WalletConnect.png" class="rounded-circle" style="width: 25px; height: 25px;">
-                                <p>MetaMask</p>
-                            </div>
                             <div class="pt-3 wallet d-flex">
                                 <img src="images/MetaMask_Fox.svg.png" class="rounded-circle" style="width: 25px; height: 25px;" >
                                 <p>MetaMask</p>
                             </div>
-                            <div>
+                            <div class="pt-3 wallet d-flex">
+                                <img src="images/discord.png" class="rounded-circle bg-white" style="width: 25px; height: 25px;">
+                                <p>Discord</p>
+                            </div>
+                            <div class=" wallet-footer text-secondary">
                                 <p>Don't have MetaMask? <a href="#">click here</a></p>
                             </div>
                         </div>
-
+                        <!--
                         <div id="votePage" class="container pt-5 d-flex justify-content-center">
                             <button type="button" class=" btn btn button" data-toggle="modal"
                                 data-target="#myModal">Done</button>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>
@@ -126,7 +127,6 @@
         /*INTEGRATION FOR NEXT PAGE BUTTON*/
 
         var next = document.getElementById('votePage');
-
         next.addEventListener('click', () => {
             window.document.location = './voting_page.html';
         });

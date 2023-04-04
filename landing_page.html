@@ -15,14 +15,13 @@
 <body class="bg-gradient">
 
   <nav class='nav-bar'>
-
     <div class=" container logo">
-      <h2 class=" sm h1  text-gradients ">dBall<span class="text-plain">ot</span></h2>
+      <h2 class="sm h1  text-gradients">dBall<span class="text-plain">ot</span></h2>
     </div>
 
     <ul class="container nav-links">
 
-      <li class="vote active"><a href="./signIn_page.html">Vote Now</a></li>
+      <li class="vote active"><a href="./result.html">Result</a></li>
       <li class="whitepaper"><a href="#">Whitepaper</a></li>
 
     </ul>
@@ -49,19 +48,19 @@
           Consectetur officiis dolorem ipsa ad?
         </p>
         
-        <div class="col py-3 d-flex" data-aos="fade-left">
+        <div class="col pt-3 d-flex" data-aos="fade-left">
           <div >
             <button id="signIn" type="button" class="btn btn-sm btn-light rounded-pill button text-light">
                 Vote Now</button>
           </div>
-          <div class='button-space'>
-            <button type="button" class="btn btn-md outline-button text-light">
+          <div  class='button-space'>
+            <button id="tutorial" type="button" class="btn btn-md outline-button text-light">
               How it Works</button>
           </div>
         </div>
       </div>
 
-      <div class="blockchain_img">
+      <div class="blockchain_img d-flex align-item-right">
         <img src="images/blockchain_img.png" class='block' alt="">
       </div>
     </div>
@@ -73,7 +72,7 @@
   • CAST YOUR VOTE NOW!
   • CAST YOUR VOTE NOW!
   • CAST YOUR VOTE NOW!
-  • CAST YOUR VOTE NOW!
+  • CAST YOUR VOTE NOW! 
   • CAST YOUR VOTE NOW!
   • CAST YOUR VOTE NOW!
   • CAST YOUR VOTE NOW!
@@ -199,33 +198,6 @@
     </div>
     
   </section>
-
-  <!--COUNTDOWN-->
-
-  <div class="container  p-5 text-center mw-50 bg-gradient" data-aos="fade-up">
-    <div class="time-block row-sm launch-time py-4 d-flex justify-content-center text-light">
-      <div class="col" style="font-size: 1.2rem">
-        <P id="day">00</P>
-        <span>DAYS</span>
-      </div>
-  
-      <div class="col" style="font-size: 1.2rem; border-left: 1px solid #a7a3f8">
-        <P id="hour">00</P>
-        <span>HOURS</span>
-      </div>
-  
-      <div class="col" style="font-size: 1.2rem; border-left: 1px solid #a7a3f8">
-        <P id="minute">00</P>
-        <span>MINUTES</span>
-      </div>
-  
-    </div>
-    <div class="text-secondary" style="font-size: 1.2rem">
-      <p>Remaining until the next election</p>
-    </div>
-  </div>
-
-  <!--STOP-->
 
 
   <marquee loop="-1" style=" background-color:#a7a3f8; font-size:0.7rem">
@@ -404,6 +376,20 @@
 
     document.addEventListener('DOMContentLoaded',  function() {
       init();
+    });
+  </script>
+
+  <script>
+    const inits = function () {
+      let secondBtn2 = document.querySelector("#tutorial");
+
+      secondBtn2.addEventListener('click', function () {
+        window.document.location = './how_it_works.html';
+      });
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+      inits();
     });
   </script>
 </body>

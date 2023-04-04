@@ -14,30 +14,8 @@
     padding-top: 20px;
 }
 
+
 /**
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    
-}
-
-.modal-content {
-    position: relative;
-    margin: auto;
-    padding: 0;
-    width: 60%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
 
 .close {
     color: white;
@@ -53,61 +31,61 @@
     cursor: pointer;
 }
 
-.modal-header {
-    background: rgba(125, 166, 220, 0.05);
-    border-radius: 10px;
-    margin-bottom: 16px;
-    height: 50px;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease 0;
-}
-
-.modal-body {
-    padding: 2px 16px;
-    
-}
-
-.wallet-heading {
-    margin: 0px 0px 20px;
-    font-size: 28px;
-    line-height: 1.2;
-    font-weight: 700;
-}
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
-
 **/
 
 
 
-.SecondLogo {
-    margin-bottom: 40px;
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    padding-top: 100px;
 }
 
+.modal-cont {
+    width: 40%;
+    padding:20px;
+    margin: auto;
+    border-radius: 1rem;
+    backdrop-filter: blur(4rem);
+    background: rgba(171, 171, 171, 0.1);
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+}
 
-.wallet-dialog-content {
-    padding: 8px;
+.modal-head {
+    padding: 8 0 8px 0;
     margin: 20px;
 }
 
+
+
 .wallet-heading {
-    margin: 0px 0px 20px;
-    font-size: 28px;
+    margin: 0px 0px 0;
+    font-size: 22px;
     line-height: 1.2;
     font-weight: 700;
 }
 
-.modal-body {
-    display:block;
+.wallet-heading-para {
+    padding: 5px 0 10px 0;
+    word-spacing: .2rem;
+    font-size: 15px;
 }
 
+
+.wallet-footer {
+    padding-top: 30px;
+}
 
 .wallet {
     
@@ -135,39 +113,6 @@ p {
     margin-left: 10px;
     margin-bottom: 20px;
 }
-.top-wallet {
-    padding-right: 20px;
-}
-
-
-#myModal {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
-
-.modal-content {
-    max-width: 600px;
-    height: 300px;
-    margin: auto;
-    position:  absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border-radius: 1rem;
-    backdrop-filter: blur(4rem);
-    background: rgba(171, 171, 171, 0.1);
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
-}
-
-#website-content {
-    height: 1000vh;
-}
 
 
 
@@ -176,22 +121,33 @@ p {
 
 
 @media (max-width: 1024px) {
-    .top-wallet {
-        width: 25rem;
-       
-    }
-    .toppest {
-        margin-left: 50px;
-    }
-
+    
 }
 
 
-@media (max-width: 786) {
-    .wallet-dialog-content {
+@media (max-width: 786px) {
+    .modal-cont {
+        z-index: 1;
         width: 100%;
-        margin: 0 auto;
-        padding: 0;
+        max-height: 350px;
+        margin-top: 100px;
     }
+
+    .modal-head {
+        
+        width: 80%;
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    .wallet-heading {
+        font-size: 1.4rem;
+    }
+
+    .wallet-heading-para {
+        font-size: .6rem;
+    }
+
 }
     

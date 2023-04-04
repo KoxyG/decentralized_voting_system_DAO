@@ -36,11 +36,17 @@ nav {
     height: 10vh;
 }
 
+.heading {
+    margin-top: 100px;
+}
+
 
 
 .burger {
+   
     display:none;
     cursor: pointer;
+    z-index: 1;
 
 }
 
@@ -72,9 +78,22 @@ nav {
     font-weight: bold;
 }
 
+.nav-links a:hover {
+    color: #a7a3f8;
+}
+
+
+.nav-bar {
+    position: fixed;
+    
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .2);
+}
+
 .active {
     border: 1px solid #fc9741;
-    border-radius: 30px;
     padding: 5px;
 }
 
@@ -151,10 +170,11 @@ nav {
    
     width: 100%;
     
-    right: 0;
+    float: rig;
     object-fit: cover;
     animation: moveUpDown 8s ease-in-out infinite;
     position: relative;
+
 
    
     
@@ -315,6 +335,7 @@ blockquote p {
         padding-left: 50px;
         padding-right: 50px;
     }
+    
 }
 
 /*FOR MOBILE */
@@ -364,6 +385,7 @@ blockquote p {
 
     .burger {
         display: block;
+        
     }
 
     

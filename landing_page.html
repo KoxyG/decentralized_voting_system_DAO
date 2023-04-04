@@ -250,12 +250,10 @@
       var now = new Date().getTime();
       var distance = countDownDate - now;
 
-      //cautomatically calculating the days, hours, minutes and seconds
-
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
 
       //displaying the days, hours, minutes, seconds
 
@@ -263,7 +261,7 @@
       document.getElementById("days").innerHTML = days;
       document.getElementById("hours").innerHTML = hours;
       document.getElementById("minutes").innerHTML = minutes;
-      document.getElementById("seconds").innerHTML = seconds;
+      
 
       //what the time should display when countdown is over
 
@@ -282,45 +280,7 @@
 
 
 
-  <!--SECOND COUNTDOWN SCRIPT-->
-
-  <script>
-    //creating variable for end time
-    var countDownDate = new Date("July 06, 2023 00:00:00").getTime();
-    var x = setInterval(function () {
-      //setting variables for recent time and others
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-
-      //cautomatically calculating the days, hours, minutes and seconds
-
-      var day = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minute = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var second = Math.floor((distance % (1000 * 60)) / 1000);
-
-      //displaying the days, hours, minutes, seconds
-
-
-      document.getElementById("day").innerHTML = day;
-      document.getElementById("hour").innerHTML = hour;
-      document.getElementById("minute").innerHTML = minute;
-      document.getElementById("second").innerHTML = second;
-
-      //what the time should display when countdown is over
-
-      if (distance < 0) {
-        clearInterval(x);
-
-        document.getElementById("day").innerHTML = "00";
-        document.getElementById("hour").innerHTML = "00";
-        document.getElementById("minute").innerHTML = "00";
-        document.getElementById("second").innerHTML = "00";
-      }
-
-    }, 1000);
-
-  </script>
+  
   <!--JAVASCRIPT SECTION-->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

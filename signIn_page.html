@@ -53,14 +53,14 @@
 
             <div id="myModal" class="modal bg-gradient">
                 <div class="modal-cont" >
-                    <div class="modal-head row text-center">
+                    <div class="modall-head row text-center">
                         <button type="button" id="close-model-btn" class="btn-close close bg-light" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                         <!--<span class="close">&times;</span>-->
                         <h2 class="wallet-heading text-white text-center">Connect Wallet or SignIn</h2>
                         <p class="wallet-heading-para text-center text-white"</p>
 
-                        <div class="modal-body text-center">
+                        <div class="modall-body text-center">
                             <div class="pt-3 wallet d-flex">
                                 <img src="images/MetaMask_Fox.svg.png" class="rounded-circle" style="width: 25px; height: 25px;" >
                                 <p>MetaMask</p>
@@ -73,58 +73,13 @@
                                 <p>Don't have MetaMask? <a href="#">click here</a></p>
                             </div>
                         </div>
-                        <!--
-                        <div id="votePage" class="container pt-5 d-flex justify-content-center">
-                            <button type="button" class=" btn btn button" data-toggle="modal"
-                                data-target="#myModal">Done</button>
-                        </div>
-                        -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <script>
-
-        /*INTEGRATED JAVASCRIPT FOR THE BUTTONS*/
-
-        var overlay = document.getElementById('myModal');
-        var show = document.getElementById('myBtn');
-        var show2 = document.getElementById('show-modal-1');
-        var close = document.getElementById('close-model-btn');
-        /**var span = document.getElementsByClassName("close")[0];**/
-
-        show.addEventListener('click', () => {
-            overlay.style.display = "block";
-        });
-
-        /**span.addEventListener('click', () => {
-            overlay.style.display = "none";
-        });**/
-
-        show2.addEventListener('click', () => {
-            overlay.style.display = "block"; 
-        });
-
-        close.addEventListener('click', () => {
-            overlay.style.display = "none";
-        });
-
-        window.onclick = function(event) {
-            if (event.target === overlay) {
-                overlay.style.display = 'none';
-            }
-        }
-
-
-    </script>
-
-    
-
-
+    <script src="components/signIn.js"></script>
 
 </body>
 </html>

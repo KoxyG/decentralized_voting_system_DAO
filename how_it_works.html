@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles/signin.css">
     <link rel="stylesheet" href="styles/voting.css">
     <link rel="stylesheet" href="styles/result.css">
+    <link rel="stylesheet" href="styles/tutorial.css">
+
 
     <title>Voting page</title>
 </head>
@@ -28,8 +30,55 @@
             <button type="button" class="btn btn-fliud rounded-pill button" data-toggle="modal"
                 data-target="#myModal">Connect</button>
         </div>
-
     </nav>
+
+    <section class="container text-center text-dark" style="padding-top: 100px;">
+        <h2 class="text-white pb-5" style="padding-bottom: 100px">How does our dBallot DAO work?</h2>
+
+        <div>
+            <div class="card card-next" data-aos="zoom-in-right" >
+                <div class="card-body text-center">
+                    <div>
+                        <p class="card-pa text-center" style="background: white;">Step 1</p>
+                    </div>
+                    <img src="images/card-wallet.png" class="py-4 text-center">
+                    <h1>Connect Wallet</h1>
+                    <p>Connect the network authorized wallet(s) with our dBallot DAO or Sign In</p>
+                </div>
+            </div>
+
+            <div class="card card-next" data-aos="zoom-in-right">
+                <div class="card-body text-center">
+                    <div>
+                        <p class="card-pa text-center" style="background: white;">Step 2</p>
+                    </div>
+                    <img src="images/icons8-elections.png" class="py-4 text-center">
+                    <h1>Add Votes</h1>
+                    <p>Select preferred candidate by selecting a choice</p>
+                </div>
+            </div>
+
+            <div class="card pb-5 card-next" data-aos="zoom-in-right">
+                <div class="card-body text-center">
+                    <div>
+                        <p class="card-pa text-center" style="background: white;">Step 3</p>
+                    </div>
+                    <img src="images/icons8-result.png" class="py-4 text-center">
+                    <h1>View Result</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+        });
+    </script>
 </body>
 
 </html>

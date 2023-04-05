@@ -1,0 +1,25 @@
+.card-pa {
+    width: 5em;
+    height: 2em;
+    margin: -2em auto 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+}
+
+.card-next {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+.card-body img {
+    height: 128px;
+    width: auto;
+}

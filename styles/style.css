@@ -37,7 +37,7 @@ nav {
 }
 
 .heading {
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 
@@ -106,7 +106,10 @@ nav {
     background-color: #fc9741;
 }
 
-
+.intro {
+    margin-left: auto;
+        margin-right: auto;
+}
 
 .drop {
     background-color:#b525e4;  
@@ -169,6 +172,7 @@ nav {
 .blockchain_img {
    
     width: 100%;
+    
     
     float: rig;
     object-fit: cover;
@@ -324,7 +328,7 @@ blockquote p {
 /*For Desktop*/
 @media (min-width: 768px) {
     .intro {
-        width: 50%;
+        width: 100%;
     }
     .allcards {
         padding-top: 40px;
@@ -351,6 +355,12 @@ blockquote p {
     .block {
         height: auto;
         max-height: 100%;
+    }
+    .intro {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

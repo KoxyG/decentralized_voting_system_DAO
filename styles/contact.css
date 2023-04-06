@@ -51,3 +51,8 @@ input[type=submit]:hover {
 .contact-heading {
     line-height: 1.7rem;
 }
+
+
+@media (max-width: 768px) {
+    
+}

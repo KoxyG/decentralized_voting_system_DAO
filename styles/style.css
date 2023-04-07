@@ -58,7 +58,7 @@ nav {
     
 }
 
-.nav-links {
+.nar-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,23 +69,23 @@ nav {
 
 }
 
-.nav-links li {
+.nar-links li {
     list-style: none;
 }
 
-.nav-links a {
+.nar-links a {
     color: white;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: bold;
 }
 
-.nav-links a:hover {
+.nar-links a:hover {
     color: #a7a3f8;
 }
 
 
-.nav-bar {
+.nar {
     position: fixed;
     
     top: 0;
@@ -331,11 +331,11 @@ blockquote p {
 
 /*For Desktop*/
 @media (min-width: 600px) {
-    .nav-bar {
+    .nar {
         display: flex;
         justify-content: space-between;
     }
-    .nav-links {
+    .nar-links {
        font-size: .7rem;
     }
 }

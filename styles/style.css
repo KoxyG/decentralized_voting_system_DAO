@@ -4,7 +4,7 @@
 :root {
     --bs-gradient: linear-gradient(90deg, rgb(23, 15, 61), rgb(13, 2, 47));
     --bs-gradients: linear-gradient(90deg, rgb(181, 37, 228), rgb(234, 32, 231));
-    font-size: .8rem;
+    font-size: .6rem;
 }
 
 body {
@@ -110,7 +110,7 @@ nav {
 
 .intro {
     margin-left: auto;
-        margin-right: auto;
+    margin-right: auto;
 }
 
 .drop {
@@ -330,6 +330,8 @@ blockquote p {
 
 
 /*For Desktop*/
+
+
 @media (min-width: 768px) {
     .intro {
         width: 100%;

@@ -74,3 +74,16 @@ var myChart1 = new Chart(ctx1, {
                     }
                 }
             });
+
+
+const home = function() {
+      let secondBtn = document.querySelector("#GoHome");
+      
+      secondBtn.addEventListener('click', function() {
+        window.document.location = './landing_page.html';
+      });
+    };
+
+    document.addEventListener('DOMContentLoaded',  function() {
+      home();
+    });

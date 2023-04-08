@@ -8,6 +8,7 @@
     color: #a7a3f8;
     border-radius: 0.8rem;
     padding-bottom: 20px;
+    cursor: pointer;
    
 }
 
@@ -30,6 +31,11 @@
     border-radius: 0.8rem;
     font-size: 0.4rem !important;
 
+}
+
+.box:hover {
+    -webkit-transform: translate(0px, -3px) scale(1.0);
+    cursor: pointer;
 }
 
 
@@ -79,3 +85,16 @@
     justify-content: end;
 }
 
+.homey {
+    background-color: #fc9741;
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+.homey:hover {
+
+    -webkit-transform: translate(0px, -3px) scale(1.0);
+    transform: translate(0px, -3px) scale(1.0);
+    background-image: linear-gradient(90deg, rgb(254, 207, 0), rgb(232, 126, 12));
+}

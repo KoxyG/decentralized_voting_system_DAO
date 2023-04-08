@@ -6,7 +6,7 @@
                 labels: ['PDP', 'APC', 'WYC', 'KPP'],
                 datasets: [{
                     label: 'Vote Percentage',
-                    data: [12, 19, 3, 4],
+                    data: [30, 50, 5, 15],
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(54, 162, 235)',
@@ -22,15 +22,13 @@
             
             Chart.defaults.font.size = 12;
             var myChart = new Chart(ctx, {
-                type: 'bar',
+                type: 'doughnut',
                 data: data,
                 options: {
                     responsive: true,
                     Option: {
                         layout: {
-                            padding: {
-                                left: 50
-                            }
+            
                         }
                     },
                     plugins: {

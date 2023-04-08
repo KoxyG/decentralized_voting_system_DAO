@@ -12,3 +12,63 @@
 .result {
     margin-top: 100px;
 }
+
+
+.box {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background: rgba(171, 171, 171, 0.1);
+    color: #a7a3f8;
+    margin: 15px 20px 15px 10px;
+    padding: 8px 15px 8px 15px;
+    border-radius: 0.8rem;
+    font-size: 0.4rem !important;
+
+}
+
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    
+}
+
+.color1 {
+    background-color: rgb(255, 99, 132);
+    height: 30px;
+    width: 30px;
+    border-radius: 0.2rem;
+}
+
+.color2 {
+    background-color: rgb(54, 162, 235);
+    height: 30px;
+    width: 30px;
+    border-radius: 0.2rem;
+}
+
+.color3 {
+    background-color: rgb(255, 205, 86);
+    height: 30px;
+    width: 30px;
+    border-radius: 0.2rem;
+}
+
+.color4 {
+    background-color: rgb(254, 105, 56);
+    height: 30px;
+    width: 30px;
+    border-radius: 0.2rem;
+}
+
+.part {
+    padding-left: 10px;
+}
+.percent {
+    display: flex;
+    justify-content: end;
+}

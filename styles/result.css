@@ -1,4 +1,4 @@
-#myChart {
+#myChart1, #myChart {
     width: 100%;
     position: relative;
     background: rgba(171, 171, 171, 0.1);
@@ -8,8 +8,12 @@
     color: #a7a3f8;
     border-radius: 0.8rem;
     padding-bottom: 20px;
+   
 }
 
+#myChart1 {
+    margin-bottom: 50px;
+}
 .result {
     margin-top: 100px;
 }
@@ -69,7 +73,9 @@
 .part {
     padding-left: 10px;
 }
+
 .percent {
     display: flex;
     justify-content: end;
 }
+

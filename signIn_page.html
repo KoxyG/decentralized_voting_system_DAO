@@ -1,85 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/signin.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/signin.css" />
 
     <title>signIn_page</title>
-</head>
-<body class="bg-gradient">
-
-
-    <nav class='nav-bar bg-gradient mb-5'>
-    
-        <div class="container logo">
-            <h2 class=" sm h1  text-gradients ">dBall<span class="text-plain">ot</span></h2>
-        </div>
-        <!--CONNECT WALLET BUTTON TOP RIGHT-->
-        <div id="show-modal-1" class="top-wallet toppest">
-            <button type="button" class="btn btn-fliud rounded-pill button" data-toggle="modal" data-target="#myModal">Connect</button>
-        </div>
+  </head>
+  <body class="bg-gradient">
+    <nav class="nav-bar bg-gradient mb-5">
+      <div class="container logo">
+        <h2 class="sm h1 text-gradients">
+          dBall<span class="text-plain">ot</span>
+        </h2>
+      </div>
+      <!--CONNECT WALLET BUTTON TOP RIGHT-->
+      <div id="show-modal-1" class="top-wallet toppest">
+        <button
+          type="button"
+          class="btn btn-fliud rounded-pill button"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          Connect
+        </button>
+      </div>
     </nav>
 
     <section id="signIn" style="padding-top: 100px; padding-bottom: 100px">
-        <div class=" container text-white d-flex justify-content-center mt-5 py-5 text-center">
-            <div class="card login" style="width: 25rem;">
-                
-                <div class="card-body py-4 mt-5">
-                    <h2 class=" sm h1 SecondLogo text-gradients">dBall<span class="text-plain">ot</span></h2>
-                    <h3 class="card-title login-title pt-5 text-light ">Welcome Fren👋</h3>
-                    <p class="card-text text-light">Start voting in seconds</p>
+      <div
+        class="container text-white d-flex justify-content-center mt-5 py-5 text-center"
+      >
+        <div class="card login" style="width: 25rem">
+          <div class="card-body py-4 mt-5">
+            <h2 class="sm h1 SecondLogo text-gradients">
+              dBall<span class="text-plain">ot</span>
+            </h2>
+            <h3 class="card-title login-title pt-5 text-light">
+              Welcome Fren👋
+            </h3>
+            <p class="card-text text-light">Start voting in seconds</p>
 
-                    <!--CONNECT WALLET BUTTON BELOW-->
-                    <div id="myBtn">
-                        <button type="button" class="btn btn-fliud rounded-pill button" data-toggle="modal" data-target="#myModal">Connect
-                            Wallet</button>
-                    </div>
-                </div> 
-                <!--FOOTER COPYRIGHT-->
-                <div class="footer-bottom col-md-12 text-secondary py-5">
-                    <p class="copyright"> Copyright &copy 2023 All rights reserved</p>
-                </div>
+            <!--CONNECT WALLET BUTTON BELOW-->
+            <div id="myBtn">
+              <button
+                type="button"
+                class="btn btn-fliud rounded-pill button"
+                data-toggle="modal"
+                data-target="#myModal"
+              >
+                Connect Wallet
+              </button>
             </div>
-
-
-
-
-            <div id="myModal" class="modal bg-gradient">
-                <div class="modal-cont" >
-                    <div class="modall-head row text-center">
-                        <button type="button" id="close-model-btn" class="btn-close close bg-light" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                        <!--<span class="close">&times;</span>-->
-                        <h2 class="wallet-heading text-white text-center">Connect Wallet or SignIn</h2>
-                        <p class="wallet-heading-para text-center text-white"</p>
-
-                        <div class="modall-body text-center">
-                            <div class="pt-3 wallet d-flex">
-                                <img src="images/MetaMask_Fox.svg.png" class="rounded-circle" style="width: 25px; height: 25px;" >
-                                <p>MetaMask</p>
-                            </div>
-                            <div class="pt-3 wallet d-flex">
-                                <img src="images/discord.png" class="rounded-circle bg-white" style="width: 25px; height: 25px;">
-                                <p>Discord</p>
-                            </div>
-                            <div class=" wallet-footer text-secondary">
-                                <p>Don't have MetaMask? <a href="#">click here</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <!--FOOTER COPYRIGHT-->
+          <div class="footer-bottom col-md-12 text-secondary py-5">
+            <p class="copyright">Copyright &copy 2023 All rights reserved</p>
+          </div>
         </div>
+
+        <div id="myModal" class="modal bg-gradient">
+          <div class="modal-cont">
+            <div class="modall-head row text-center">
+              <button
+                type="button"
+                id="close-model-btn"
+                class="btn-close close bg-light"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              <!--<span class="close">&times;</span>-->
+              <h2 class="wallet-heading text-white text-center">
+                Connect Wallet or SignIn
+              </h2>
+              <p class="wallet-heading-para text-center text-white"></p>
+
+              <div class="modall-body text-center">
+                <div class="pt-3 wallet d-flex" id="metaMaskBtn">
+                  <img
+                    src="images/MetaMask_Fox.svg.png"
+                    class="rounded-circle"
+                    style="width: 25px; height: 25px"
+                  />
+                  <p>MetaMask</p>
+                </div>
+                <div class="pt-3 wallet d-flex">
+                  <img
+                    src="images/discord.png"
+                    class="rounded-circle bg-white"
+                    style="width: 25px; height: 25px"
+                  />
+                  <p>Discord</p>
+                </div>
+                <div class="wallet-footer text-secondary">
+                  <p>Don't have MetaMask? <a href="#">click here</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="components/signIn.js"></script>
-
-</body>
+  </body>
 </html>

@@ -1,116 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/signin.css">
-    <link rel="stylesheet" href="styles/voting.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/signin.css" />
+    <link rel="stylesheet" href="styles/voting.css" />
     <title>Voting page</title>
-</head>
+  </head>
 
-<body class="bg-gradient">
+  <body class="bg-gradient">
     <nav class="nav-bar bg-gradient mb-5">
-    
-        <div class="container logo">
-            <h2 class="sm h1  text-gradients">dBall<span class="text-plain">ot</span></h2>
-        </div>
-        
-        <div id="show-modal-1" class="top-wallet toppest">
-            <button type="button" class="btn btn-fliud rounded-pill button" data-toggle="modal"
-                data-target="#myModal">Connect</button>
-        </div>
-    
+      <div class="container logo">
+        <h2 class="sm h1 text-gradients">
+          dBall<span class="text-plain">ot</span>
+        </h2>
+      </div>
+
+      <div id="show-modal-1" class="top-wallet toppest">
+        <button
+          type="button"
+          id="connect"
+          class="btn btn-fliud rounded-pill button"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          Connect
+        </button>
+      </div>
     </nav>
 
     <section class="container pt-5">
-
-        <div class="table-container">
-            <div class="heading">
-                <h1 style="font-size: 40px">Voting DashBoard</h1>
-                <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>CANDIDATE</th>
-                        <th>NAME</th>
-                        <th>PARTY</th>
-                        <th>VOTE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="ID">1</td>
-                        <td data-label="CANDIDATE"><img src="https://randomuser.me/api/portraits/men/1.jpg" class='vote-img rounded-circle' alt=""></td>
-                        <td data-label="NAME">Peter</td>
-                        <td data-label="PARTY">PDP</td>
-                        <td data-label="VOTE"><button type="button" id="show" class="align-item-right btn btn button" data-toggle="modal"
-                            data-target="#myModal">Vote</button>
-                        </td>
-                        <div id="dip" onclick="clickButton(1)" class="alert alert-success">
-                            <strong>Success!</strong> vote recorded successfully.
-                        </div>
-                    </tr>
-
-                    <tr>
-                        <td data-label="ID">2</td>
-                        <td data-label="CANDIDATE"><img src="https://randomuser.me/api/portraits/men/1.jpg" class='vote-img rounded-circle' alt=""></td>
-                        <td data-label="NAME">Peter</td>
-                        <td data-label="PARTY">PDP</td>
-                        <td data-label="VOTE"><button type="button" id="show2" class="align-item-right btn btn button" data-toggle="modal"
-                            data-target="#myModal">Vote</button>
-                        </td>
-                        <div id="dip2" onclick="clickButton(2)" class="alert alert-success">
-                            <strong>Success!</strong> vote recorded successfully.
-                        </div>
-                        
-                    </tr>
-
-                    <tr>
-                        <td data-label="ID">3</td>
-                        <td data-label="CANDIDATE"><img src="https://randomuser.me/api/portraits/men/1.jpg" class='vote-img rounded-circle' alt=""></td>
-                        <td data-label="NAME">Peter</td>
-                        <td data-label="PARTY">APC</td>
-                        <td data-label="VOTE"><button type="button" id="show3" class="align-item-right btn btn button" data-toggle="modal"
-                            data-target="#myModal">Vote</button></td>
-                    </tr>
-                    <div id="dip3" onclick="clickButton(3)" class="alert alert-success">
-                        <strong>Success!</strong> vote recorded successfully.
-                    </div>
-
-                    <tr>
-                        <td data-label="ID">4</td>
-                        <td data-label="CANDIDATE"><img src="https://randomuser.me/api/portraits/men/1.jpg" class='vote-img rounded-circle' alt=""></td>
-                        <td data-label="NAME">Peter Obi</td>
-                        <td data-label="PARTY">PDP</td>
-                        <td data-label="VOTE"><button type="button" id="show4" class="align-item-right btn btn button" data-toggle="modal" data-target="#myModal">Vote</button></td>
-                    </tr>
-                    <div id="dip4" onclick="clickButton(4)" class="alert alert-success">
-                        <strong>Success!</strong> vote recorded successfully.
-                    </div>
-                </tbody>
-            </table>
-            
-
-
-            <div class="next py-3">
-                <button type="button" id="resultPage" class=" btn text-white btn button" data-toggle="modal" data-target="#myModal">CONTINUE ></button>
-            </div>
-
+      <div class="table-container">
+        <div class="heading">
+          <h1 style="font-size: 40px">Voting DashBoard</h1>
+          <p class="text-secondary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
         </div>
-        
 
-    <section>
+        <div id="candidatesDiv">
+          <div id="candidates" class="modal-body text-center"></div>
+        </div>
 
+        <div class="next py-3">
+          <button
+            type="button"
+            id="castVote"
+            class="btn text-white btn button"
+            data-toggle="modal"
+            data-target="#myModal"
+          >
+            Cast Vote
+          </button>
+        </div>
+      </div>
+    </section>
 
-    <script src="components/vote.js"></script>
-</body>
-
+    <script
+      src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+      charset="utf-8"
+      type="text/javascript"
+    ></script>
+    <script type="module" src="components/vote.js"></script>
+  </body>
 </html>

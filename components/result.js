@@ -1,7 +1,12 @@
-import { getTotalCandidatesCount, getCandidate } from "./service.js";
+import {
+  getTotalCandidatesCount,
+  getCandidate,
+  getTotalVotes,
+} from "./service.js";
 
 const year = new Date().getFullYear();
 const totalCandidatesCount = await getTotalCandidatesCount(year);
+const totalVotes = await getTotalVotes(year);
 const candidates = [];
 const candidateNames = [];
 const voteCounts = [];
@@ -107,3 +112,37 @@ const home = function () {
 document.addEventListener("DOMContentLoaded", function () {
   home();
 });
+
+const percentBox = document.querySelector(".percentBox");
+document.querySelector(".totalVotes").textContent = totalVotes;
+const addBox = async () => {
+  for (let i = 0; i < totalCandidatesCount; i++) {
+    // create div element with classes
+    const div = document.createElement("div");
+    div.classList.add("box");
+
+    const leftDiv = document.createElement("div");
+    leftDiv.classList.add("left");
+
+    const color = document.createElement("div");
+    color.classList.add(`color${(i % 4) + 1}`);
+
+    const leftH4 = document.createElement("h4");
+    leftH4.textContent = candidateNames[i];
+    leftH4.classList.add("part", "pt-3");
+
+    leftDiv.appendChild(color);
+    leftDiv.appendChild(leftH4);
+
+    const rightH4 = document.createElement("h4");
+    rightH4.textContent = voteCounts[i];
+    rightH4.classList.add("percent", "pt-3");
+
+    div.appendChild(leftDiv);
+    div.appendChild(rightH4);
+
+    percentBox.appendChild(div);
+  }
+};
+
+addBox();

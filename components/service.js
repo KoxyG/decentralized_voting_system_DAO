@@ -72,7 +72,7 @@ async function getTotalVotes(year = new Date().getFullYear()) {
   const contract = await new ethers.Contract(contractAddress, abi, signer);
 
   try {
-    const totalVotes = await contract.getTotalVote(year);
+    const totalVotes = await contract.getTotalVotes(year);
     return totalVotes.toNumber();
   } catch (error) {
     console.log(error);

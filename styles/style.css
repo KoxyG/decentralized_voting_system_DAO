@@ -41,7 +41,7 @@ nav {
 }
 
 
-
+/**
 .burger {
    
     display:none;
@@ -57,6 +57,7 @@ nav {
     margin: 5px;
     
 }
+*/
 
 .nav-links {
     display: flex;
@@ -338,9 +339,16 @@ blockquote p {
     .nav-links {
        font-size: .7rem;
     }
+    .menu {
+        display: none;
+    }
+
 }
 
 @media (min-width: 768px) {
+    .menu {
+        display: none;
+    }
     .intro {
         width: 100%;
     }
@@ -409,6 +417,7 @@ blockquote p {
 
 
 
+    
     .burger {
         display: block;
         
@@ -437,8 +446,61 @@ blockquote p {
     }
 }
 
+/**START HERE*/
 
 
+.menu {
+    
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+    padding: 0;
+}
+
+.line {
+    fill: none;
+    stroke: #fc9741;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+/**
 
 .burger.is-active .line1 {
     transform: translate(0px, 8px) rotate(-45deg);
@@ -452,3 +514,5 @@ blockquote p {
 .burger.is-active .line3 {
     transform: translate(0px, -8px) rotate(45deg);
 }
+
+**/

@@ -161,8 +161,6 @@ async function listenForVoteEvent() {
     console.log(
       `Vote Event: Voter: ${voter} CandidateId: ${candidateId} Year: ${year}`
     );
-    voteCounts[candidateId] += 1;
-    totalVotes += 1;
     window.location.reload();
   });
 }

@@ -1,0 +1,25 @@
+{
+  "name": "decentralized_voting_system_dao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoxyG/decentralized_voting_system_DAO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KoxyG/decentralized_voting_system_DAO/issues"
+  },
+  "homepage": "https://github.com/KoxyG/decentralized_voting_system_DAO#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.1"
+  }
+}

@@ -25,9 +25,9 @@ function sendEmail(to, name, email, subject, phone, company) {
       //     path: __dirname + '/style/snow_mountain.jpg',
       //     cid: 'birthday'
       // }],
-      subject: "DBallon Email Contact",
+      subject: "Contact Form on DBallot Decentralized Voting Website",
       // html: '<h1>Happy Birthday!</h1><img src="cid:birthday"/>',
-      html: `<strong>Name: </strong>${name} <br/><strong>Email: </strong>${email} <br/><strong>Subject: </strong>${subject} <br/><strong>Phone: </strong>${phone} <br/><strong>Company: </strong>${company}`,
+      html: `<b>Name: </b>${name} <br><b>Email: </b>${email} <br><b>Subject: </b>${subject} <br><b>Phone: </b>${phone} <br><b>Company: </b>${company}`,
     },
     (error, info) => {
       if (error) return console.error(error);

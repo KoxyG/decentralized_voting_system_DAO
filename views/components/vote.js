@@ -14,7 +14,7 @@ castVoteBtn.addEventListener("click", async () => {
     alert("Please select a candidate");
     return;
   }
-  // await castVote(voteId);
+  await castVote(voteId);
   //   alert("Voting for candidate " + voteId);
   window.document.location = "./result.html";
 });

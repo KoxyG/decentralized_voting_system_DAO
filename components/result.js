@@ -3,13 +3,14 @@ import {
   getCandidate,
   getTotalVotes,
 } from "./service.js";
+import { abi, contractAddress } from "./constants.js";
 
 const year = new Date().getFullYear();
 const totalCandidatesCount = await getTotalCandidatesCount(year);
-const totalVotes = await getTotalVotes(year);
+let totalVotes = await getTotalVotes(year);
 const candidates = [];
 const candidateNames = [];
-const voteCounts = [];
+let voteCounts = [];
 for (let i = 0; i < totalCandidatesCount; i++) {
   const candidate = await getCandidate(i, year);
   const partyName = candidate.name;
@@ -101,17 +102,7 @@ var myChart = new Chart(ctx, {
   },
 });
 
-const home = function () {
-  let secondBtn = document.querySelector("#GoHome");
-
-  secondBtn.addEventListener("click", function () {
-    window.document.location = "./landing_page.html";
-  });
-};
-
-document.addEventListener("DOMContentLoaded", function () {
-  home();
-});
+document.addEventListener("DOMContentLoaded", function () {});
 
 const percentBox = document.querySelector(".percentBox");
 document.querySelector(".totalVotes").textContent = totalVotes;
@@ -146,3 +137,33 @@ const addBox = async () => {
 };
 
 addBox();
+
+const home = function () {
+  let secondBtn = document.querySelector("#GoHome");
+
+  secondBtn.addEventListener("click", function () {
+    // window.document.location = "./landing_page.html";
+    voteCounts[2] += 1;
+    totalVotes += 1;
+    // window.location.reload();
+    addBox();
+  });
+};
+home();
+
+// Listens for vote event emitted by the smart contract
+async function listenForVoteEvent() {
+  const provider = await new ethers.providers.Web3Provider(window.ethereum);
+  const signer = await provider.getSigner();
+  const contract = await new ethers.Contract(contractAddress, abi, signer);
+
+  contract.on("VoteCasted", (voter, candidateId, year) => {
+    console.log(
+      `Vote Event: Voter: ${voter} CandidateId: ${candidateId} Year: ${year}`
+    );
+    voteCounts[candidateId] += 1;
+    totalVotes += 1;
+    window.location.reload();
+  });
+}
+listenForVoteEvent();

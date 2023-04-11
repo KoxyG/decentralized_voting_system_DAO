@@ -112,6 +112,19 @@ async function getElectionWinner(year = new Date().getFullYear()) {
   };
 }
 
+// Listens for vote event emitted by the smart contract
+async function listenForVoteEvent() {
+  const provider = await new ethers.providers.Web3Provider(window.ethereum);
+  const signer = await provider.getSigner();
+  const contract = await new ethers.Contract(contractAddress, abi, signer);
+
+  contract.on("VoteCasted", (voter, candidateId, year) => {
+    console.log(
+      `Vote Event: Voter: ${voter} CandidateId: ${candidateId} Year: ${year}`
+    );
+  });
+}
+
 function listenForTxMine(txResponse, provider) {
   console.log(`Mining ${txResponse.hash}`);
   return new Promise((resolve, reject) => {

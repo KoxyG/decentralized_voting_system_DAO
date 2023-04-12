@@ -1,4 +1,4 @@
-import { getTotalCandidatesCount, getCandidate } from "./service.js";
+import { getTotalCandidatesCount, getCandidate, castVote } from "./service.js";
 
 const candidates = document.getElementById("candidates");
 const candidatesDiv = document.getElementById("candidatesDiv");
@@ -14,9 +14,13 @@ castVoteBtn.addEventListener("click", async () => {
     alert("Please select a candidate");
     return;
   }
-  await castVote(voteId);
-  //   alert("Voting for candidate " + voteId);
-  window.document.location = "./result.html";
+  try {
+    await castVote(voteId);
+    //   alert("Voting for candidate " + voteId);
+    window.document.location = "./result.html";
+  } catch (error) {
+    alert(error);
+  }
 });
 
 // Get candidate names

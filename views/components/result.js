@@ -138,18 +138,18 @@ const addBox = async () => {
 
 addBox();
 
-const home = function () {
-  let secondBtn = document.querySelector("#GoHome");
+// const home = function () {
+//   let secondBtn = document.querySelector("#GoHome");
 
-  secondBtn.addEventListener("click", function () {
-    // window.document.location = "./landing_page.html";
-    voteCounts[2] += 1;
-    totalVotes += 1;
-    // window.location.reload();
-    addBox();
-  });
-};
-home();
+//   secondBtn.addEventListener("click", function () {
+//     window.document.location = "./landing_page.html";
+//     // voteCounts[2] += 1;
+//     // totalVotes += 1;
+//     // window.location.reload();
+//     // addBox();
+//   });
+// };
+// home();
 
 // Listens for vote event emitted by the smart contract
 async function listenForVoteEvent() {
